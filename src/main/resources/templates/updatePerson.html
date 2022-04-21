@@ -1,21 +1,21 @@
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title>Index Page</title>
+        <title>Update Page</title>
     </head>
     <body>
-        <form action="/add-person" method="post">
+        <form action="/update" method="post">
             <table>
                 <tr>
-                    <td><label for="pid">Person ID</label></td>
-                    <td><input type="text" name="pid"></input></td>
+                    <td><label for="PID">Person ID </label></td>
+                    <td><input type="text" name="pid"  th:value="${person.pid}" readonly></input></td>
                 </tr>
                 <tr>
                     <td><label for="pname">Person Name</label></td>
-                    <td><input type="text" name="pname"></input></td>
+                    <td><input type="text" name="pname"  th:value="${person.pname}" readonly></input></td>
                 </tr>
                 <tr>
                     <td><label for="pjob">Person Job</label></td>
-                    <td><input type="text" name="pjob"></input></td>
+                    <td><input type="text" name="pjob"  th:value="${person.pjob}"></input></td>
                 </tr>
                 <tr>
                     <td></td>
